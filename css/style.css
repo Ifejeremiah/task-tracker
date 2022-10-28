@@ -1,0 +1,146 @@
+/* Variables */
+:root {
+  --primary-color: rgb(16, 72, 145);
+  --secondary-color: rgb(8, 104, 184);
+  --light-ash-color: rgb(241, 240, 240);
+}
+
+/* Initial Set */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+/* Utilities */
+.container {
+  max-width: 500px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flx-spc-btn {
+  justify-content: space-between;
+}
+
+.primary-btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  transition: 0.25s;
+  cursor: pointer;
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  transform: scale(0.98);
+}
+
+.highlight {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Card */
+.con-card .card {
+  border-radius: 0.25rem;
+  margin: 100px auto;
+  padding: 20px;
+  background: var(--light-ash-color);
+}
+
+/* Header */
+.card .header .title {
+  font-weight: 400;
+}
+
+.card .header .primary-btn.active {
+  background: rgb(231, 2, 2);
+}
+
+/* Content */
+
+/* Form */
+.create-task {
+  margin: 40px 0;
+  display: none;
+}
+
+.create-task.active {
+  display: block;
+}
+
+.form-control input {
+  border: 2px solid rgb(230, 230, 230);
+  width: 100%;
+  padding: 20px;
+  border-radius: 0.35rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.form-control input:focus {
+  border: 2px solid;
+}
+
+.form-control .primary-btn {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* Tasks */
+.con-task {
+  margin: 20px 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.task .title {
+  font-size: 1rem;
+}
+
+.task .delete i {
+  color: red;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+}
+
+/* About Page */
+.about-page {
+  padding: 0 40px;
+}
