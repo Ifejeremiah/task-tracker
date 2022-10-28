@@ -35,7 +35,7 @@ function handleBtn() {
 function clearInput() {
   taskField.value = ''
   dateField.value = ''
-  
+
   taskField.blur()
   dateField.blur()
 }
@@ -43,7 +43,8 @@ function clearInput() {
 function createTask() {
   const task = document.createElement('div')
   task.classList.add('task')
-  task.innerHTML = template(taskField.value, dateField.value)
+  task.innerHTML =
+    template(taskField.value, new Date(dateField.value).toDateString())
 
   taskContainer.prepend(task)
 }
