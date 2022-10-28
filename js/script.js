@@ -13,6 +13,8 @@ headerBtn.addEventListener('click', toggleForm)
 
 form.addEventListener('submit', handleForm)
 
+handleDelete()
+
 function toggleForm() {
   formContainer.classList.toggle('active')
   if (!formActive) formActive = true
@@ -33,6 +35,9 @@ function handleBtn() {
 function clearInput() {
   taskField.value = ''
   dateField.value = ''
+  
+  taskField.blur()
+  dateField.blur()
 }
 
 function createTask() {
