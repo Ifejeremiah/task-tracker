@@ -1,13 +1,13 @@
 const formContainer = document.querySelector(".create-task")
-const form = document.getElementById("add-task")
-const task = document.querySelector(".task")
 const taskContainer = document.querySelector(".con-task")
 const headerBtn = document.getElementById("header-btn")
+const form = document.getElementById("add-task")
 
 const taskField = form.querySelector('#task')
 const dateField = form.querySelector('#date')
 
 let formActive
+
 
 headerBtn.addEventListener('click', toggleForm)
 
@@ -46,11 +46,12 @@ function createTask() {
 function handleForm(evt) {
   evt.preventDefault()
 
-  if (!taskField.value && !dateField.value)
+  if (!taskField.value || !dateField.value)
     return
 
   createTask()
   clearInput()
+  handleDelete()
 }
 
 function template(title, date) {
@@ -63,4 +64,11 @@ function template(title, date) {
       <i class="fa-regular fa-trash-can"></i>
     </div>
   `
+}
+
+function handleDelete() {
+  const deleteBtn = document.getElementById('delete-icon')
+  const task = document.querySelector('.task')
+
+  deleteBtn.addEventListener('click', () => task.remove())
 }
